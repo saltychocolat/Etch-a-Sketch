@@ -1,8 +1,15 @@
 
 const container = document.querySelector("#container");
-const newGridButton = document.querySelector("button");
-const resetButton = document.querySelector("#reset")
-const input = document.querySelector("input"); 
+
+const colorInput = document.querySelector("#colorInput");
+const colorButton = document.querySelector("#colorButton");
+
+const gridInput = document.querySelector("#gridInput"); 
+const gridButton = document.querySelector("#gridButton");
+
+const resetButton = document.querySelector("#resetButton") 
+
+
 let last;
 
 function createGrid(x){
@@ -30,16 +37,15 @@ container.addEventListener("mouseover",function(event){
     target.classList.add("colored");
 })
 
-newGridButton.addEventListener("click",function(){
-    value = Number(input.value)
+gridButton.addEventListener("click",function(){
+    value = Number(gridInput.value)
+    console.log(Number.isInteger(value))
     if(Number.isInteger(value) && value<=110){
-        while(container.firstChild){
-            container.firstChild.remove()
-        }
+        container.innerHTML = ""
         last=createGrid(value)
     }
     else{
-        input.focus()
+        gridInput.focus()
         alert("Type Number")
     }
 })
@@ -50,4 +56,9 @@ resetButton.addEventListener("click",function(){
     }
     container.classList.remove("colored")
     last =createGrid(last)
+})
+
+colorButton.addEventListener("click",function(){
+    value = colorInput.value
+    document.documentElement.style.setProperty("--text-color",value)
 })

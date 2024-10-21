@@ -30,7 +30,6 @@ body{
     border-width: 5px;
 }
 input{
-    margin-left: auto;
     border:solid;
     border-color: cornflowerblue;
     width: 30px;
@@ -38,6 +37,8 @@ input{
     
 }
 button{
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100px;
     height: 30px;
     background-color: grey;
@@ -47,15 +48,15 @@ button{
     background-color: cornflowerblue;
     margin: 10px;
 }
-#reset{
+#resetButton{
     background-color: crimson;
 }
 h1{
-    padding: 50px;
+    margin-right: auto;
     color:cornflowerblue;
     font-weight: bolder;
-    padding: 5px;
+    padding: 10px;
 }
 .colored{
-    background-color: cornflowerblue;
+    background-color:var(--text-color,cornflowerblue);
 }
