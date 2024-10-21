@@ -20,4 +20,42 @@ body{
 .box{
     flex-grow: 1;
     border: solid;
+
+}
+#header{
+    display: flex;
+    align-items: center;
+    border:solid;
+    color:cornflowerblue;
+    border-width: 5px;
+}
+input{
+    margin-left: auto;
+    border:solid;
+    border-color: cornflowerblue;
+    width: 30px;
+    margin-right: 10px;
+    
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 10%;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: cornflowerblue;
+    margin: 10px;
+}
+#reset{
+    background-color: crimson;
+}
+h1{
+    padding: 50px;
+    color:cornflowerblue;
+    font-weight: bolder;
+    padding: 5px;
+}
+.colored{
+    background-color: cornflowerblue;
 }
