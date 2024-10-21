@@ -3,10 +3,11 @@ const container = document.querySelector("#container");
 const newGridButton = document.querySelector("button");
 const resetButton = document.querySelector("#reset")
 const input = document.querySelector("input"); 
-let x;
+let last;
 
 function createGrid(x){
-    if(x>100){
+    container.classList.remove("colored")
+    if(x>110){
         alert("Number too big");
         return
     }
@@ -22,20 +23,20 @@ function createGrid(x){
     }
     return x;
 }
-x=createGrid(100)
+last=createGrid(100)
 
 container.addEventListener("mouseover",function(event){
     target = event.target;
-    target.classList.toggle("colored");
+    target.classList.add("colored");
 })
 
 newGridButton.addEventListener("click",function(){
     value = Number(input.value)
-    if(Number.isInteger(value)){
+    if(Number.isInteger(value) && value<=110){
         while(container.firstChild){
             container.firstChild.remove()
         }
-        createGrid(value)
+        last=createGrid(value)
     }
     else{
         input.focus()
@@ -47,5 +48,6 @@ resetButton.addEventListener("click",function(){
     while(container.firstChild){
         container.firstChild.remove()
     }
-    createGrid(x)
+    container.classList.remove("colored")
+    last =createGrid(last)
 })
