@@ -20,6 +20,7 @@ body{
 .box{
     flex-grow: 1;
     border: solid;
+    border-width: 1.5px;
 
 }
 #header{
