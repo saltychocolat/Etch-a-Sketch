@@ -30,6 +30,7 @@ body{
     border-width: 5px;
 }
 input{
+    padding: 1px;
     border:solid;
     border-color: cornflowerblue;
     width: 30px;
